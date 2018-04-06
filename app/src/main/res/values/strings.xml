@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Easy Transit</string>
+    <string name="title_activity_admin_home">AdminHome</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_client_home">ClientHome</string>
+
+    <string-array name="stepLabels">
+        <item>Passengers</item>
+        <item>Trip</item>
+        <item>Trip B</item>
+        <item>Details</item>
+        <item>Seats</item>
+        <item>Review</item>
+        <item>Pay</item>
+    </string-array>
+    <string-array name="tripClass">
+        <item>First Class</item>
+        <item>Economy</item>
+    </string-array>
+    <string-array name="tripType">
+        <item>Express</item>
+        <item>Inter-County</item>
+    </string-array>
+
+</resources>

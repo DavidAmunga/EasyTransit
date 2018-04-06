@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtUserRating"
+            fontPath="fonts/Montserrat-BoldItalic.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textSize="25sp"
+            android:textStyle="italic"
+            tools:ignore="MissingPrefix"
+            tools:text="User Rating" />
+
+        <TextView
+            android:id="@+id/txtUserComments"
+            fontPath="fonts/Montserrat-Black.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+
+            android:textAlignment="textStart"
+            android:textSize="15sp"
+            tools:ignore="MissingPrefix"
+            tools:text="UserS  asd DdaKLDJts" />
+
+        <TextView
+            android:id="@+id/txtUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="MissingPrefix"
+            tools:text="User Rating" />
+
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

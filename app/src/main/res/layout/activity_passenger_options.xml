@@ -1,0 +1,145 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".client.book.PassengerOptions">
+
+    <TextView
+        android:id="@+id/lbl1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Who will be travelling?"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/lin1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lbl1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:weightSum="2">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:text="Adults"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp" />
+        <com.shawnlin.numberpicker.NumberPicker
+            android:id="@+id/txtAdultNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:np_dividerColor="@color/colorPrimary"
+            app:np_max="5"
+            android:background="@color/colorWhite"
+            app:np_min="1"
+            app:np_orientation="horizontal"
+            app:np_selectedTextColor="@color/colorAccent"
+            app:np_selectedTextSize="16sp"
+            app:np_textColor="@color/colorPrimary"
+            app:np_textSize="14sp"
+            app:np_value="1" />
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/lin2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/lin1"
+        android:layout_below="@id/lin1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:text="Children"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp" />
+        <com.shawnlin.numberpicker.NumberPicker
+            android:id="@+id/txtChildNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:layout_centerInParent="true"
+            app:np_dividerColor="@color/colorPrimary"
+            app:np_max="5"
+            app:np_min="0"
+            app:np_orientation="horizontal"
+            app:np_selectedTextColor="@color/colorAccent"
+            app:np_selectedTextSize="16sp"
+            app:np_textColor="@color/colorPrimary"
+            app:np_textSize="14sp"
+            app:np_value="0" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/lin1"
+        android:layout_below="@id/lin2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:text="Infants"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp" />
+
+        <com.shawnlin.numberpicker.NumberPicker
+            android:id="@+id/txtInfantNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:np_dividerColor="@color/colorPrimary"
+            app:np_max="5"
+            android:background="@color/colorWhite"
+            app:np_min="0"
+            app:np_orientation="horizontal"
+            app:np_selectedTextColor="@color/colorAccent"
+            app:np_selectedTextSize="16sp"
+            app:np_textColor="@color/colorPrimary"
+            app:np_textSize="14sp"
+            app:np_value="0" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/lin3"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorAccent"
+        android:text="NEXT"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp" />
+
+</RelativeLayout>

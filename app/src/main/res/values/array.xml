@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="locationArray">
+        <item>Nairobi</item>
+        <item>Athi River</item>
+        <item>Miasenyi</item>
+        <item>Voi</item>
+        <item>Mtito Andei</item>
+        <item>Kibwezi</item>
+        <item>Emali</item>
+        <item>Athi River</item>
+        <item>Mombasa</item>
+    </string-array>
+
+
+    <string-array name="typesArray">
+       <item>Inter-County</item>
+       <item>Express</item>
+    </string-array>
+    <string-array name="classesArray">
+        <item>First Class</item>
+        <item>Economy</item>
+    </string-array>
+
+</resources>

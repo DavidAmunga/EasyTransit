@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "268012538068",
+    "firebase_url": "https://trein-a0a0e.firebaseio.com",
+    "project_id": "trein-a0a0e",
+    "storage_bucket": "trein-a0a0e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:268012538068:android:214ad08ad47694e9",
+        "android_client_info": {
+          "package_name": "com.buttercell.trein"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "268012538068-b2l1rck9npci9futfkbme3562n94rnun.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.buttercell.trein",
+            "certificate_hash": "ee7f4dea610caa9191ff7eb912fae5164e48c5b2"
+          }
+        },
+        {
+          "client_id": "268012538068-h4cgg1s94kaq1s9r13le83liofk6rd46.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbB5sodBo5PuyJ0zTKKAOBslQxmbwm5N8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "268012538068-h4cgg1s94kaq1s9r13le83liofk6rd46.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
