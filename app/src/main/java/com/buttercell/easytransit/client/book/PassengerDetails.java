@@ -88,7 +88,7 @@ public class PassengerDetails extends AppCompatActivity {
                 if (count <= size) {
                     Log.d(TAG, "onClick: Count Item" + count);
                     count++;
-                    Toast.makeText(PassengerDetails.this, "Enter for passenger " + count, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(PassengerDetails.this, "Enter for passenger " + (count+1), Toast.LENGTH_SHORT).show();
                     if (i < Common.adultNo) {
                         Log.d(TAG, "onClick: Adult");
 

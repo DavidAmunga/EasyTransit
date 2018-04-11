@@ -78,7 +78,7 @@ public class AddStation extends AppCompatActivity {
         final String info = txt_station_info.getText().toString().trim();
 
         if (!TextUtils.isEmpty(name) && !TextUtils.isEmpty(info) && imageUri != null) {
-            progressDialog.setMessage("Adding.....");
+            progressDialog.setMessage("Adding Station.....");
             progressDialog.setCancelable(false);
             progressDialog.show();
 

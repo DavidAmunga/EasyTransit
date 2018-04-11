@@ -102,6 +102,7 @@ public class AdminTrips extends Fragment {
                 holder.txtType.setText(model.getTrainType());
                 holder.txtEndTime.setText(model.getEndTime());
                 holder.txtStartTime.setText(model.getStartTime());
+                holder.txtDate.setText(model.getDate());
 
                 holder.cap.setMax(7);
                 holder.cap.setProgress(model.getCapacity());
@@ -171,6 +172,8 @@ public class AdminTrips extends Fragment {
         TextView txtClass;
         @BindView(R.id.txtType)
         TextView txtType;
+        @BindView(R.id.txtDate)
+        TextView txtDate;
         @BindView(R.id.cap)
         RoundCornerProgressBar cap;
 
@@ -199,6 +202,10 @@ public class AdminTrips extends Fragment {
         public void setTxtClass(String tripClass)
         {
             txtClass.setText(tripClass);
+        }
+        public void setTxtDate(String date)
+        {
+            txtDate.setText(date);
         }
         public void setTxtType(String tripType)
         {

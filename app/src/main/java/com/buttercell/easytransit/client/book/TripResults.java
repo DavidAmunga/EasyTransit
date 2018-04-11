@@ -67,10 +67,10 @@ public class TripResults extends AppCompatActivity {
         getSupportActionBar().setTitle("Trip Results");
         query = FirebaseFirestore.getInstance()
                 .collection("Trips")
+                .orderBy("capacity")
                 .orderBy("timestamp")
                 .whereLessThan("capacity", 20)
-                .whereEqualTo("date", Common.currentTripDetails.getDate())
-        ;
+                .whereEqualTo("date", Common.currentTripDetails.getDate());
         Log.d(TAG, "Trip Date" + Common.currentTripDetails.getDate());
 
         query.addSnapshotListener(new EventListener<QuerySnapshot>() {
@@ -125,6 +125,7 @@ public class TripResults extends AppCompatActivity {
                 holder.setTxtEndTime(model.getEndTime());
                 holder.setTxtStartTime(model.getStartTime());
                 holder.setCapacity(model.getCapacity());
+                holder.setTxtDate(model.getDate());
 
                 Log.d(TAG, "onBindViewHolder: " + model);
 
@@ -177,7 +178,7 @@ public class TripResults extends AppCompatActivity {
         Log.d(TAG, "Return date :" + Common.retDate);
         Query query = FirebaseFirestore.getInstance()
                 .collection("Trips")
-                .orderBy("timestamp")
+                .orderBy("capacity")
                 .whereEqualTo("date", Common.retDate)
                 .whereLessThan("capacity", 20)
                 .whereEqualTo("arrival", Common.currentTripDetails.getDeparture());
@@ -198,6 +199,7 @@ public class TripResults extends AppCompatActivity {
                 holder.setTxtEndTime(model.getEndTime());
                 holder.setTxtStartTime(model.getStartTime());
                 holder.setCapacity(model.getCapacity());
+                holder.setTxtDate(model.getDate());
 
                 Log.d(TAG, "onBindViewHolder: " + model);
 

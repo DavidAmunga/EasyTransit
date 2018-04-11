@@ -9,4 +9,5 @@
     <color name="divider">#c2c2c2</color>
     <color name="row_activated">#e0e0e0</color>
     <color name="lightBackground">#F2F4F7</color>
+    <color name="colorRed">#F71735</color>
 </resources>

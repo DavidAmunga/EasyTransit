@@ -42,7 +42,7 @@
                 android:textAlignment="textEnd"
                 tools:text="DocNo"
                 android:textStyle="italic"
-                android:textColor="@color/colorAccent"
+                android:textColor="@color/colorWhite"
                 android:textSize="20sp"
                 />
         </LinearLayout>

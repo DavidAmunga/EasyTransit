@@ -13,15 +13,25 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.buttercell.easytransit.admin.AdminHome;
+import com.buttercell.easytransit.client.book.PassengerOptions;
+import com.buttercell.easytransit.client.book.TripOptions;
+import com.buttercell.easytransit.common.Common;
+import com.buttercell.easytransit.model.Station;
 import com.buttercell.easytransit.model.Trip;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentChange;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QuerySnapshot;
 import com.jaredrummler.materialspinner.MaterialSpinner;
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
@@ -30,7 +40,9 @@ import java.util.UUID;
 public class AddTrip extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener, DatePickerDialog.OnDateSetListener {
 
     MaterialSpinner spinnerArr, spinnerDep, spinnerClass, spinnerType;
-    List<String> locations, types, classes;
+    List<String> locations = new ArrayList<>();
+    List<String> types = new ArrayList<>();
+    List<String> classes = new ArrayList<>();
     Button btnAdd;
     EditText edtDiscount, edtFee;
     TextView txtStart, txtEnd, txtDate;
@@ -44,9 +56,28 @@ public class AddTrip extends AppCompatActivity implements TimePickerDialog.OnTim
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_trip);
+        progressDialog = new ProgressDialog(this);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        Query query = FirebaseFirestore.getInstance().collection("Stations");
+
+
+        query.addSnapshotListener(new EventListener<QuerySnapshot>() {
+            @Override
+            public void onEvent(QuerySnapshot documentSnapshots, FirebaseFirestoreException e) {
+                for (DocumentChange doc : documentSnapshots.getDocumentChanges()) {
+                    if (doc.getType() == DocumentChange.Type.ADDED) {
+
+                        Station station = doc.getDocument().toObject(Station.class);
+                        locations.add(station.getStation_name());
+
+                        spinnerArr.setItems(locations);
+                        spinnerDep.setItems(locations);
+                    }
+                }
+            }
+        });
 
         initViews();
 
@@ -110,12 +141,10 @@ public class AddTrip extends AppCompatActivity implements TimePickerDialog.OnTim
         btnAdd = findViewById(R.id.btnAdd);
 
 
-        locations = Arrays.asList(getResources().getStringArray(R.array.locationArray));
         types = Arrays.asList(getResources().getStringArray(R.array.typesArray));
         classes = Arrays.asList(getResources().getStringArray(R.array.classesArray));
 
-        spinnerArr.setItems(locations);
-        spinnerDep.setItems(locations);
+
         spinnerClass.setItems(classes);
         spinnerType.setItems(types);
 
